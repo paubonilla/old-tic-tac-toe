@@ -46,6 +46,11 @@
     padding-left: 30px;
 }
 
+.move-list {
+    display: flex;
+    list-style: none;
+}
+
 .game-info {
     margin-left: 20px;
 }

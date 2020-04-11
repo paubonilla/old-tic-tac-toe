@@ -45,7 +45,9 @@ export default class Game extends Component {
         const moves = history.map((step, move) => {
             const desc = move? 'Go to num ' + move : 'Start the Game';
             return (
-                <li key={move}>
+                <li 
+                    className="move-list"
+                    key={move}>
                     <button onClick={() => {this.jumpTo(move)}}>
                         {desc}
                     </button>
@@ -54,9 +56,9 @@ export default class Game extends Component {
         })
         let status;
         if(winner) {
-            status = 'Winner is ' + winner;
+            status = 'Player ' + winner + ' is the winner!';
         } else {
-            status = 'Next player is ' + (this.state.xIsNext? 'X' : 'O');
+            status = 'It is ' + (this.state.xIsNext? 'X' : 'O') + "'s turn";
         }
 
 
