@@ -1,5 +1,20 @@
 import React, { Component } from 'react'
 import Square from './Square'
+import styled from 'styled-components'
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+export const BorderRow = styled.div`
+  display: flex;
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+`
 
 export default class Board extends Component {
     renderSquare(i) {
@@ -10,23 +25,23 @@ export default class Board extends Component {
     }
     render() {
         return (
-            <div>
-                <div className="border-row">
+            <Wrapper>
+                <BorderRow>
                     {this.renderSquare(0)}
                     {this.renderSquare(1)}
                     {this.renderSquare(2)}
-                </div>
-                <div className="border-row">
+                </BorderRow>
+                <BorderRow>
                     {this.renderSquare(3)}
                     {this.renderSquare(4)}
                     {this.renderSquare(5)}
-                </div>
-                <div className="border-row">
+                </BorderRow>
+                <BorderRow>
                     {this.renderSquare(6)}
                     {this.renderSquare(7)}
                     {this.renderSquare(8)}
-                </div>
-            </div>
+                </BorderRow>
+            </Wrapper>
         )
     }
 }

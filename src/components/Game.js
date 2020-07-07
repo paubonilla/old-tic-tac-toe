@@ -1,5 +1,26 @@
 import React, { Component } from 'react'
-import Board from './Board';
+import Board from './Board'
+import styled from 'styled-components'
+
+export const GameWrapper = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+`
+
+export const Button = styled.button`
+  /* display: inline; */
+  margin: 20px 0;
+  height: 25px;
+  width: 120px;
+  border: none;
+  outline: none;
+  background: #e8e8e8;
+`
 
 export default class Game extends Component {
     constructor(props) {
@@ -43,14 +64,14 @@ export default class Game extends Component {
         const current = history[this.state.stepNumber];
         const winner = calculateWinner(current.squares);
         const moves = history.map((step, move) => {
-            const desc = move? 'Go to num ' + move : 'Start the Game';
+            const desc = move? 'Player move ' + move : 'Start New Game';
             return (
                 <li 
                     className="move-list"
                     key={move}>
-                    <button onClick={() => {this.jumpTo(move)}}>
+                    <Button onClick={() => {this.jumpTo(move)}}>
                         {desc}
-                    </button>
+                    </Button>
                 </li>
             )
         })
@@ -63,7 +84,7 @@ export default class Game extends Component {
 
 
         return (
-            <div className="game">
+            <GameWrapper>
                 <div className="game-board">
                     <div className="title">tic tac toe</div>
                     <Board 
@@ -75,7 +96,7 @@ export default class Game extends Component {
                     <div>{status}</div>
                     <ul>{moves}</ul>
                 </div>
-            </div>
+            </GameWrapper>
         )
     }
 }
