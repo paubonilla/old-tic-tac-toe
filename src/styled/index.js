@@ -68,6 +68,7 @@ export const PlayerInfo = styled.div`
 export const PlayerStatus = styled.div`
   font-family: 'Special Elite', cursive;
   color: #f40804;
+  width: 200px;
 `
 
 export const MoveList = styled.li`

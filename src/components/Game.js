@@ -44,7 +44,7 @@ export default class Game extends Component {
         const current = history[this.state.stepNumber];
         const winner = calculateWinner(current.squares);
         const moves = history.map((step, move) => {
-            const desc = move? 'Player move ' + move : 'Start New Game';
+            const desc = move? "Player's move " + move : 'Start New Game';
             return (
                 <MoveList 
                     key={move}>
@@ -56,9 +56,9 @@ export default class Game extends Component {
         })
         let status;
         if(winner) {
-            status = 'Player ' + winner + ' win!';
+            status = winner + "'s win!";
         } else {
-            status = 'It is ' + (this.state.xIsNext? 'X' : 'O') + "'s turn";
+            status = 'It is ' + (this.state.xIsNext? 'Dwight' : 'Jim') + "'s turn";
         }
 
 
