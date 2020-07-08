@@ -60,7 +60,7 @@ export const SquareButton = styled.button`
 `
 
 export const PlayerInfo = styled.div`
-  margin: 0 20px 0;
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
 `
@@ -68,7 +68,7 @@ export const PlayerInfo = styled.div`
 export const PlayerStatus = styled.div`
   font-family: 'Special Elite', cursive;
   color: #f40804;
-  width: 200px;
+  width: 155px;
 `
 
 export const MoveList = styled.li`
