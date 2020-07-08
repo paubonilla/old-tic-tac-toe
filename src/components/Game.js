@@ -93,6 +93,7 @@ export default class Game extends Component {
                     <PlayerInfo>
                         <ul>{moves}</ul>
                     </PlayerInfo>
+                    
                 </GameInner>
                 <div>
                     <Image src={michael} alt="si tito scott"/>
