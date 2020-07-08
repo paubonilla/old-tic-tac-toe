@@ -1,6 +1,23 @@
 import React, { Component } from 'react'
-import { GameWrapper, Button, PlayerInfo, PlayerStatus, MoveList } from '../styled'
+import { GameInner, Button, PlayerInfo, PlayerStatus, MoveList } from '../styled'
 import Board from './Board'
+
+import michael from '../images/michael.png'
+import styled from 'styled-components'
+
+export const ImageStyle = styled.div`
+  width: 100%;
+  height: 100%;
+`
+
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+`
 
 export default class Game extends Component {
     constructor(props) {
@@ -58,24 +75,29 @@ export default class Game extends Component {
         if(winner) {
             status = winner + "'s win!";
         } else {
-            status = 'It is ' + (this.state.xIsNext? 'Dwight' : 'Jim') + "'s turn";
+            status = "It's " + (this.state.xIsNext? 'Dwight' : 'Michael') + "'s turn";
         }
 
 
         return (
-            <GameWrapper>
-                <div className="game-board">
-                    <div className="title">The Office: tic tac toe</div>
-                    <Board 
-                        onClick={(i) => this.handleClick(i)}
-                        squares={current.squares}
-                    />
+            <div>
+                <GameInner>
+                    <div className="game-board">
+                        {/* <div className="title">The Office: tic tac toe</div> */}
+                        <PlayerStatus>{status}</PlayerStatus>
+                        <Board 
+                            onClick={(i) => this.handleClick(i)}
+                            squares={current.squares}
+                        />
+                    </div>
+                    <PlayerInfo>
+                        <ul>{moves}</ul>
+                    </PlayerInfo>
+                </GameInner>
+                <div>
+                    <Image src={michael} alt="si tito scott"/>
                 </div>
-                <PlayerInfo>
-                    <PlayerStatus>{status}</PlayerStatus>
-                    <ul>{moves}</ul>
-                </PlayerInfo>
-            </GameWrapper>
+            </div>
         )
     }
 }

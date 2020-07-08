@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const PageWrapper = styled.div`
-  /* margin: 20px; */
+  position: relative;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -9,19 +9,15 @@ export const PageWrapper = styled.div`
   background-image: radial-gradient(#F8F9FD, #2997F1);
 `
 
-export const GameWrapper = styled.div`
-  position: relative;
-  display: flex;
-`
-
-export const GAmeInner = styled.div`
+export const GameInner = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 0 auto;
+
 `
 
 export const Button = styled.button`
@@ -39,10 +35,7 @@ export const Button = styled.button`
 export const SquareButton = styled.button`
   background: #f6fe81;
   color: #173ef2;
-  border: 2px solid #4a2908;
-  /* border: none; */
-  border-radius: 10px;
-  /* float: left; */
+  border: 1px solid #4a2908;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
@@ -66,9 +59,13 @@ export const PlayerInfo = styled.div`
 `
 
 export const PlayerStatus = styled.div`
-  font-family: 'Special Elite', cursive;
+  font-family: 'Special Elite',cursive;
+  font-size: 20px;
   color: #f40804;
-  width: 155px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 `
 
 export const MoveList = styled.li`
