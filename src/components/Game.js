@@ -1,26 +1,6 @@
 import React, { Component } from 'react'
+import { GameWrapper, Button, PlayerInfo, PlayerStatus, MoveList } from '../styled'
 import Board from './Board'
-import styled from 'styled-components'
-
-export const GameWrapper = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-`
-
-export const Button = styled.button`
-  /* display: inline; */
-  margin: 20px 0;
-  height: 25px;
-  width: 120px;
-  border: none;
-  outline: none;
-  background: #e8e8e8;
-`
 
 export default class Game extends Component {
     constructor(props) {
@@ -66,18 +46,17 @@ export default class Game extends Component {
         const moves = history.map((step, move) => {
             const desc = move? 'Player move ' + move : 'Start New Game';
             return (
-                <li 
-                    className="move-list"
+                <MoveList 
                     key={move}>
                     <Button onClick={() => {this.jumpTo(move)}}>
                         {desc}
                     </Button>
-                </li>
+                </MoveList>
             )
         })
         let status;
         if(winner) {
-            status = 'Player ' + winner + ' is the winner!';
+            status = 'Player ' + winner + ' win!';
         } else {
             status = 'It is ' + (this.state.xIsNext? 'X' : 'O') + "'s turn";
         }
@@ -86,16 +65,16 @@ export default class Game extends Component {
         return (
             <GameWrapper>
                 <div className="game-board">
-                    <div className="title">tic tac toe</div>
+                    <div className="title">The Office: tic tac toe</div>
                     <Board 
                         onClick={(i) => this.handleClick(i)}
                         squares={current.squares}
                     />
                 </div>
-                <div className="game-info">
-                    <div>{status}</div>
+                <PlayerInfo>
+                    <PlayerStatus>{status}</PlayerStatus>
                     <ul>{moves}</ul>
-                </div>
+                </PlayerInfo>
             </GameWrapper>
         )
     }
