@@ -17,7 +17,7 @@ export const GameInner = styled.div`
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-
+  z-index: 10000;
 `
 
 export const Button = styled.button`
@@ -45,7 +45,7 @@ export const SquareButton = styled.button`
   font-family: 'Special Elite', cursive;
   font-size: 40px;
   font-weight: bold;
-  line-height: 80px;
+  line-height: 90px;
 
   &:focus {
     outline: none;

@@ -6,11 +6,15 @@ import michael from '../images/michael.png'
 import styled from 'styled-components'
 
 export const ImageStyle = styled.div`
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
   width: 100%;
   height: 100%;
 `
 
 export const Image = styled.img`
+ position: absolute;
   width: 100%;
   height: 100%;
 
@@ -47,6 +51,7 @@ export default class Game extends Component {
             return;
         }
         squares[i] = this.state.xIsNext ? 'X' : 'O';
+
         this.setState({
             history: history.concat({
                 squares: squares
@@ -61,7 +66,7 @@ export default class Game extends Component {
         const current = history[this.state.stepNumber];
         const winner = calculateWinner(current.squares);
         const moves = history.map((step, move) => {
-            const desc = move? "Player's move " + move : 'Start New Game';
+            const desc = move? "Player's " + move + " move" : 'Start New Game';
             return (
                 <MoveList 
                     key={move}>
@@ -75,7 +80,7 @@ export default class Game extends Component {
         if(winner) {
             status = winner + "'s win!";
         } else {
-            status = "It's " + (this.state.xIsNext? 'Dwight' : 'Michael') + "'s turn";
+            status = (this.state.xIsNext? 'Dwight' : 'Michael') + " it's turn";
         }
 
 
@@ -93,11 +98,11 @@ export default class Game extends Component {
                     <PlayerInfo>
                         <ul>{moves}</ul>
                     </PlayerInfo>
-                    
+
                 </GameInner>
-                <div>
+                <ImageStyle>
                     <Image src={michael} alt="si tito scott"/>
-                </div>
+                </ImageStyle>
             </div>
         )
     }
