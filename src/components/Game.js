@@ -14,13 +14,11 @@ export const ImageStyle = styled.div`
 `
 
 export const Image = styled.img`
- position: absolute;
+  position: absolute;
   width: 100%;
-  height: 100%;
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: auto;
+  bottom: 0;
+  right: 0;
 `
 
 export default class Game extends Component {
