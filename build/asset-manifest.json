@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/tic-tac-toe/static/css/main.702f1548.chunk.css",
-    "main.js": "/tic-tac-toe/static/js/main.2ea112bb.chunk.js",
-    "main.js.map": "/tic-tac-toe/static/js/main.2ea112bb.chunk.js.map",
-    "runtime-main.js": "/tic-tac-toe/static/js/runtime-main.df28867d.js",
-    "runtime-main.js.map": "/tic-tac-toe/static/js/runtime-main.df28867d.js.map",
-    "static/js/2.86eb3687.chunk.js": "/tic-tac-toe/static/js/2.86eb3687.chunk.js",
-    "static/js/2.86eb3687.chunk.js.map": "/tic-tac-toe/static/js/2.86eb3687.chunk.js.map",
-    "index.html": "/tic-tac-toe/index.html",
-    "precache-manifest.328f91b9379cf354a82e63c536248c1b.js": "/tic-tac-toe/precache-manifest.328f91b9379cf354a82e63c536248c1b.js",
-    "service-worker.js": "/tic-tac-toe/service-worker.js",
-    "static/css/main.702f1548.chunk.css.map": "/tic-tac-toe/static/css/main.702f1548.chunk.css.map",
-    "static/js/2.86eb3687.chunk.js.LICENSE.txt": "/tic-tac-toe/static/js/2.86eb3687.chunk.js.LICENSE.txt",
-    "static/media/michael.png": "/tic-tac-toe/static/media/michael.b09e93bf.png"
+    "main.css": "/old-tic-tac-toe/static/css/main.702f1548.chunk.css",
+    "main.js": "/old-tic-tac-toe/static/js/main.ec43dc76.chunk.js",
+    "main.js.map": "/old-tic-tac-toe/static/js/main.ec43dc76.chunk.js.map",
+    "runtime-main.js": "/old-tic-tac-toe/static/js/runtime-main.e43b64e4.js",
+    "runtime-main.js.map": "/old-tic-tac-toe/static/js/runtime-main.e43b64e4.js.map",
+    "static/js/2.594aa652.chunk.js": "/old-tic-tac-toe/static/js/2.594aa652.chunk.js",
+    "static/js/2.594aa652.chunk.js.map": "/old-tic-tac-toe/static/js/2.594aa652.chunk.js.map",
+    "index.html": "/old-tic-tac-toe/index.html",
+    "precache-manifest.d7a4caa1240b66027d8fe39c833484eb.js": "/old-tic-tac-toe/precache-manifest.d7a4caa1240b66027d8fe39c833484eb.js",
+    "service-worker.js": "/old-tic-tac-toe/service-worker.js",
+    "static/css/main.702f1548.chunk.css.map": "/old-tic-tac-toe/static/css/main.702f1548.chunk.css.map",
+    "static/js/2.594aa652.chunk.js.LICENSE.txt": "/old-tic-tac-toe/static/js/2.594aa652.chunk.js.LICENSE.txt",
+    "static/media/michael.png": "/old-tic-tac-toe/static/media/michael.b09e93bf.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.df28867d.js",
-    "static/js/2.86eb3687.chunk.js",
+    "static/js/runtime-main.e43b64e4.js",
+    "static/js/2.594aa652.chunk.js",
     "static/css/main.702f1548.chunk.css",
-    "static/js/main.2ea112bb.chunk.js"
+    "static/js/main.ec43dc76.chunk.js"
   ]
 }
